@@ -1,0 +1,33 @@
+[package]
+name = "examples"
+version = "1.0.0"
+authors = ["Fernando Jimenez Moreno <fjimenez@igalia.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.40"
+byte-slice-cast = "1.0.0"
+clap = { version = "3.0.7", features = ["yaml"]}
+derive_more = "0.99.14"
+glib = "0.15"
+opentok = { path = "../opentok" }
+opentok-utils = { path = "../utils" }
+json = "0.12"
+surf = "2"
+url = "2.2"
+
+[dependencies.async-std]
+features = ["attributes"]
+version = "1"
+
+[[bin]]
+name = "basic_video_chat"
+
+[[bin]]
+name = "custom_video_capturer"
+
+[[bin]]
+name = "publisher_only"
+
+[[bin]]
+name = "subscriber_only"
